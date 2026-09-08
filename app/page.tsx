@@ -1326,11 +1326,10 @@ export default function Home() {
           <div className="flex items-center gap-4 shrink-0">
             <Link href="#" className="hover:text-white underline">Privacy Policy</Link>
             <span>|</span>
-            <Link href="#" className="hover:text-white underline">T&amp;C</Link>
+            <Link href="" className="hover:text-white underline">T&amp;C</Link>
           </div>
         </div>
       </footer>
-
     </div>
   );
 }
