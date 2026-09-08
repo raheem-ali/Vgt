@@ -3,6 +3,7 @@
 
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Property {
   id: string;
@@ -252,7 +253,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900 font-sans selection:bg-[#c2a482] selection:text-white relative overflow-x-hidden">
+    <div className="min-h-screen bg-white text-neutral-900 font-sans selection:bg-black selection:text-white relative overflow-x-hidden">
       
       {/* ================= SECTION 1: HERO & SEARCH BAR ================= */}
       <section className="relative w-full min-h-screen lg:h-screen flex flex-col justify-between overflow-hidden bg-black">
@@ -270,48 +271,45 @@ export default function Home() {
         </div>
 
         <header className="relative z-30 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pt-5 flex items-center justify-between text-white">
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="bg-white/10 backdrop-blur-md p-1.5 rounded-[4px] border border-white/20 shadow-lg flex items-center justify-center">
-              <div className="text-[8px] sm:text-[9px] font-bold uppercase tracking-tight text-white leading-none text-center px-1">
-                Best <br />Workplaces
-              </div>
-            </div>
-            <div className="flex items-center gap-1 cursor-pointer">
-              <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white fill-current" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-              </svg>
-              <span className="text-lg sm:text-xl font-bold tracking-wider text-white">VGT</span>
-            </div>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Image 
+              src="/4-removebg-preview.png" 
+              alt="VGT Logo" 
+              width={200}
+              height={70}
+              className="w-36 sm:w-48 h-auto"
+              priority
+            />
           </div>
 
           <nav className="hidden xl:flex items-center gap-6 2xl:gap-7 text-[15px] font-normal tracking-wide text-white drop-shadow-md">
-            <Link href="#" className="hover:text-[#c2a482] transition">Home</Link>
+            <Link href="#" className="hover:text-black transition">Home</Link>
             
             <div className="relative" onMouseLeave={() => setIsNavDropdownOpen(false)}>
               <button 
                 onMouseEnter={() => setIsNavDropdownOpen(true)}
-                className="flex items-center gap-1 hover:text-[#c2a482] transition py-2"
+                className="flex items-center gap-1 hover:text-black transition py-2"
               >
                 <span>Properties</span>
                 <span className={`text-[10px] transition-transform ${isNavDropdownOpen ? 'rotate-180' : ''}`}>&#9660;</span>
               </button>
 
               {isNavDropdownOpen && (
-                <div className="absolute top-full left-0 w-56 bg-neutral-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/10 py-3 z-50 flex flex-col">
-                  <Link href="#off-plan" className="px-4 py-2.5 text-sm text-neutral-200 hover:text-white hover:bg-white/10 transition">Off-Plan Projects</Link>
-                  <Link href="#buy" className="px-4 py-2.5 text-sm text-neutral-200 hover:text-white hover:bg-white/10 transition">Buy Resale Properties</Link>
-                  <Link href="#rent" className="px-4 py-2.5 text-sm text-neutral-200 hover:text-white hover:bg-white/10 transition">Rental Properties</Link>
-                  <Link href="#" className="px-4 py-2.5 text-sm text-neutral-200 hover:text-white hover:bg-white/10 transition">Commercial Spaces</Link>
+                <div className="absolute top-full left-0 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-black/10 py-3 z-50 flex flex-col">
+                  <Link href="#off-plan" className="px-4 py-2.5 text-sm text-neutral-800 hover:text-black hover:bg-black/10 transition">Off-Plan Projects</Link>
+                  <Link href="#buy" className="px-4 py-2.5 text-sm text-neutral-800 hover:text-black hover:bg-black/10 transition">Buy Resale Properties</Link>
+                  <Link href="#rent" className="px-4 py-2.5 text-sm text-neutral-800 hover:text-black hover:bg-black/10 transition">Rental Properties</Link>
+                  <Link href="#" className="px-4 py-2.5 text-sm text-neutral-800 hover:text-black hover:bg-black/10 transition">Commercial Spaces</Link>
                 </div>
               )}
             </div>
 
-            <Link href="#" className="hover:text-[#c2a482] transition">Developers</Link>
-            <Link href="#" className="hover:text-[#c2a482] transition">Communities</Link>
-            <Link href="#" className="hover:text-[#c2a482] transition">Blogs</Link>
-            <Link href="#" className="hover:text-[#c2a482] transition">Services</Link>
-            <Link href="#" className="hover:text-[#c2a482] transition">Guide</Link>
-            <Link href="#" className="hover:text-[#c2a482] transition">About</Link>
+            <Link href="#" className="hover:text-black transition">Developers</Link>
+            <Link href="#" className="hover:text-black transition">Communities</Link>
+            <Link href="#" className="hover:text-black transition">Blogs</Link>
+            <Link href="#" className="hover:text-black transition">Services</Link>
+            <Link href="#" className="hover:text-black transition">Guide</Link>
+            <Link href="#" className="hover:text-black transition">About</Link>
           </nav>
 
           <div className="xl:hidden flex items-center">
@@ -327,7 +325,7 @@ export default function Home() {
         </header>
 
         {isMobileMenuOpen && (
-          <div className="xl:hidden absolute top-20 left-4 right-4 bg-neutral-900/95 backdrop-blur-xl rounded-2xl p-6 z-50 border border-white/10 flex flex-col gap-4 text-white shadow-2xl">
+          <div className="xl:hidden absolute top-20 left-4 right-4 bg-white/95 backdrop-blur-xl rounded-2xl p-6 z-50 border border-black/10 flex flex-col gap-4 text-black shadow-2xl">
             <Link href="#" className="text-base font-medium py-1">Home</Link>
             <Link href="#off-plan" className="text-base font-medium py-1">Off-Plan Properties</Link>
             <Link href="#buy" className="text-base font-medium py-1">Buy Properties</Link>
@@ -413,7 +411,7 @@ export default function Home() {
             <div>
               <a
                 href="#view-all-developers"
-                className="inline-flex items-center gap-2 bg-[#5c5044] hover:bg-[#4a3f35] text-white text-[11.5px] font-medium px-4 py-2.5 rounded-[4px] shadow transition duration-300 cursor-pointer"
+                className="inline-flex items-center gap-2 bg-black hover:bg-neutral-800 text-white text-[11.5px] font-medium px-4 py-2.5 rounded-[4px] shadow transition duration-300 cursor-pointer"
               >
                 <span>View All</span>
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -433,7 +431,7 @@ export default function Home() {
             {[...developerPartnersData, ...developerPartnersData, ...developerPartnersData].map((partner, idx) => (
               <div 
                 key={`${partner.id}-${idx}`}
-                className="w-[190px] sm:w-[220px] md:w-[250px] lg:w-[calc(20vw-24px)] max-w-[250px] h-[105px] mx-2.5 bg-white border border-neutral-200/80 rounded-[12px] shadow-[0_2px_12px_rgba(0,0,0,0.03)] flex items-center justify-center p-4 shrink-0 transition hover:border-[#c2a482] hover:shadow-md"
+                className="w-[190px] sm:w-[220px] md:w-[250px] lg:w-[calc(20vw-24px)] max-w-[250px] h-[105px] mx-2.5 bg-white border border-neutral-200/80 rounded-[12px] shadow-[0_2px_12px_rgba(0,0,0,0.03)] flex items-center justify-center p-4 shrink-0 transition hover:border-black hover:shadow-md"
               >
                 <span className="text-[14px] sm:text-[16px] font-bold tracking-wider text-neutral-800 uppercase select-none truncate">
                   {partner.logo}
@@ -503,7 +501,7 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-20 bg-gradient-to-t from-neutral-950 via-neutral-950/90 to-transparent">
                 <h3 className="text-[18px] sm:text-[20px] font-bold text-white tracking-tight">{property.title}</h3>
                 <p className="text-[13px] text-neutral-300 flex items-center gap-1.5 mt-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#c2a482]"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-black"></span>
                   {property.location}
                 </p>
                 <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center text-xs">
@@ -517,12 +515,12 @@ export default function Home() {
       </section>
 
       {/* ================= SECTION 4: EXPLORE SIGNATURE NEIGHBORHOODS ================= */}
-      <section className="w-full bg-white py-16 px-4 sm:px-8 lg:px-16 selection:bg-[#736453] selection:text-white">
+      <section className="w-full bg-white py-16 px-4 sm:px-8 lg:px-16 selection:bg-black selection:text-white">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           <div className="lg:col-span-4 relative flex flex-col justify-between py-2 min-h-[420px]">
             <div className="relative z-10">
-              <div className="w-12 h-[2px] bg-[#999999] mb-6"></div>
+              <div className="w-12 h-[2px] bg-black mb-6"></div>
               
               <h2 className="text-[32px] sm:text-[38px] font-normal text-[#2b2b2b] tracking-tight leading-[1.15]">
                 Explore Signature <br />
@@ -536,7 +534,7 @@ export default function Home() {
               <div className="mt-8">
                 <Link 
                   href="#"
-                  className="inline-flex items-center justify-between bg-[#61574a] hover:bg-[#4d443a] text-white text-[13px] font-medium tracking-wider px-6 py-3.5 rounded-[6px] shadow-sm transition group w-[170px]"
+                  className="inline-flex items-center justify-between bg-black hover:bg-neutral-800 text-white text-[13px] font-medium tracking-wider px-6 py-3.5 rounded-[6px] shadow-sm transition group w-[170px]"
                 >
                   <span>EXPLORE ALL</span>
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -557,7 +555,7 @@ export default function Home() {
               <div className="flex items-center gap-3 relative z-10">
                 <button 
                   onClick={() => scrollNeighborhoods('left')}
-                  className="w-12 h-12 rounded-full bg-[#61574a] hover:bg-[#4d443a] text-white flex items-center justify-center transition shadow-md cursor-pointer"
+                  className="w-12 h-12 rounded-full bg-neutral-300 hover:bg-neutral-400 text-black flex items-center justify-center transition shadow-md cursor-pointer"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
@@ -565,7 +563,7 @@ export default function Home() {
                 </button>
                 <button 
                   onClick={() => scrollNeighborhoods('right')}
-                  className="w-12 h-12 rounded-full bg-[#c2a482] hover:bg-[#b09371] text-white flex items-center justify-center transition shadow-md cursor-pointer"
+                  className="w-12 h-12 rounded-full bg-black hover:bg-neutral-800 text-white flex items-center justify-center transition shadow-md cursor-pointer"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -610,7 +608,7 @@ export default function Home() {
                         {neighborhoodsData.map((_, dotIdx) => (
                           <span 
                             key={dotIdx} 
-                            className={`rounded-full transition-all duration-300 ${activeNeighborhoodIndex === dotIdx ? 'w-6 h-2 bg-[#d4b48c]' : 'w-2 h-2 bg-white/40'}`}
+                            className={`rounded-full transition-all duration-300 ${activeNeighborhoodIndex === dotIdx ? 'w-6 h-2 bg-black' : 'w-2 h-2 bg-white/40'}`}
                           ></span>
                         ))}
                       </div>
@@ -644,7 +642,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="relative z-20 bg-[#4e453b] p-6 sm:p-8 flex flex-col justify-end mt-auto border-t border-white/10 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+              <div className="relative z-20 bg-[#010101] p-6 sm:p-8 flex flex-col justify-end mt-auto border-t border-white/10 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
                 <h3 className="text-[22px] sm:text-[25px] font-bold text-white tracking-tight leading-tight">
                   {item.title}
                 </h3>
@@ -671,7 +669,7 @@ export default function Home() {
             <div className="mt-6">
               <a
                 href="#golden-visa-consultation"
-                className="inline-flex items-center justify-center bg-[#5c5044] hover:bg-[#4a3f35] text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300"
+                className="inline-flex items-center justify-center bg-black hover:bg-neutral-800 text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300"
               >
                 Get Golden Visa Consultation
               </a>
@@ -770,7 +768,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
               
-              <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-[280px] bg-[#5c5044]/90 backdrop-blur-md p-4 rounded-[12px] text-white shadow-lg border border-white/10">
+              <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-[280px] bg-black/90 backdrop-blur-md p-4 rounded-[12px] text-white shadow-lg border border-white/10">
                 <p className="text-[11.5px] sm:text-[12.5px] font-normal leading-relaxed">
                   Your Gateway to Premium Dubai Real Estate Opportunities.
                 </p>
@@ -792,7 +790,7 @@ export default function Home() {
             <div className="mt-6">
               <a
                 href="#about-us"
-                className="inline-flex items-center justify-center bg-[#5c5044] hover:bg-[#4a3f35] text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300"
+                className="inline-flex items-center justify-center bg-black hover:bg-neutral-800 text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300"
               >
                 About Us
               </a>
@@ -806,7 +804,7 @@ export default function Home() {
       <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12 border-b border-neutral-200">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-[#c2a482] transition duration-300">
+          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-black transition duration-300">
             <div>
               <h3 className="text-[32px] sm:text-[38px] font-bold text-neutral-900 tracking-tight leading-none">
                 19+
@@ -814,9 +812,9 @@ export default function Home() {
               <p className="text-[12.5px] text-neutral-500 font-normal mt-2">
                 Years of Excellence
               </p>
-              <div className="w-8 h-[2px] bg-[#c2a482] mt-4"></div>
+              <div className="w-8 h-[2px] bg-black mt-4"></div>
             </div>
-            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#7c6c5c] shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#1a1a1a] shrink-0">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
               </svg>
@@ -824,7 +822,7 @@ export default function Home() {
             <div className="absolute right-20 top-4 bottom-4 w-[1px] bg-neutral-100 hidden sm:block"></div>
           </div>
 
-          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-[#c2a482] transition duration-300">
+          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-black transition duration-300">
             <div>
               <h3 className="text-[32px] sm:text-[38px] font-bold text-neutral-900 tracking-tight leading-none">
                 5000+
@@ -832,9 +830,9 @@ export default function Home() {
               <p className="text-[12.5px] text-neutral-500 font-normal mt-2">
                 Happy Homeowners
               </p>
-              <div className="w-8 h-[2px] bg-[#c2a482] mt-4"></div>
+              <div className="w-8 h-[2px] bg-black mt-4"></div>
             </div>
-            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#7c6c5c] shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#1a1a1a] shrink-0">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
@@ -842,7 +840,7 @@ export default function Home() {
             <div className="absolute right-20 top-4 bottom-4 w-[1px] bg-neutral-100 hidden sm:block"></div>
           </div>
 
-          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-[#c2a482] transition duration-300">
+          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-black transition duration-300">
             <div>
               <h3 className="text-[32px] sm:text-[38px] font-bold text-neutral-900 tracking-tight leading-none">
                 85+
@@ -850,9 +848,9 @@ export default function Home() {
               <p className="text-[12.5px] text-neutral-500 font-normal mt-2">
                 Honors Received
               </p>
-              <div className="w-8 h-[2px] bg-[#c2a482] mt-4"></div>
+              <div className="w-8 h-[2px] bg-black mt-4"></div>
             </div>
-            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#7c6c5c] shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#1a1a1a] shrink-0">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
               </svg>
@@ -860,7 +858,7 @@ export default function Home() {
             <div className="absolute right-20 top-4 bottom-4 w-[1px] bg-neutral-100 hidden sm:block"></div>
           </div>
 
-          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-[#c2a482] transition duration-300">
+          <div className="bg-white border border-neutral-200 rounded-[16px] p-6 sm:p-7 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between relative overflow-hidden group hover:border-black transition duration-300">
             <div>
               <h3 className="text-[32px] sm:text-[38px] font-bold text-neutral-900 tracking-tight leading-none">
                 150+
@@ -868,9 +866,9 @@ export default function Home() {
               <p className="text-[12.5px] text-neutral-500 font-normal mt-2">
                 Dedicated Agents
               </p>
-              <div className="w-8 h-[2px] bg-[#c2a482] mt-4"></div>
+              <div className="w-8 h-[2px] bg-black mt-4"></div>
             </div>
-            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#7c6c5c] shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-neutral-50 border border-neutral-100 shadow-sm flex items-center justify-center text-[#1a1a1a] shrink-0">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
@@ -898,7 +896,7 @@ export default function Home() {
             <div className="mt-6">
               <a
                 href="#watch-our-story"
-                className="inline-flex items-center justify-center bg-[#5c5044] hover:bg-[#4a3f35] text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300 cursor-pointer"
+                className="inline-flex items-center justify-center bg-black hover:bg-neutral-800 text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300 cursor-pointer"
               >
                 Watch Our Story
               </a>
@@ -947,7 +945,7 @@ export default function Home() {
             <div className="mt-6">
               <a
                 href="#explore-portfolio"
-                className="inline-flex items-center justify-center bg-[#5c5044] hover:bg-[#4a3f35] text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300 cursor-pointer"
+                className="inline-flex items-center justify-center bg-black hover:bg-neutral-800 text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300 cursor-pointer"
               >
                 Explore Portfolio
               </a>
@@ -974,7 +972,7 @@ export default function Home() {
             <div className="mt-6">
               <a
                 href="#learn-more"
-                className="inline-flex items-center justify-center bg-[#5c5044] hover:bg-[#4a3f35] text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300 cursor-pointer"
+                className="inline-flex items-center justify-center bg-black hover:bg-neutral-800 text-white text-[12px] font-medium px-5 py-3 rounded-[4px] shadow transition duration-300 cursor-pointer"
               >
                 Learn More
               </a>
@@ -996,7 +994,7 @@ export default function Home() {
       </section>
 
       {/* ================= SECTION 13: SMART PROPERTY CARE BANNER ================= */}
-      <section className="w-full bg-[#5c5044] py-14 px-6 sm:px-10 lg:px-16 relative overflow-hidden text-white">
+      <section className="w-full bg-black py-14 px-6 sm:px-10 lg:px-16 relative overflow-hidden text-white">
         <div className="absolute right-0 bottom-0 top-0 w-1/2 opacity-15 pointer-events-none hidden lg:flex items-center justify-end overflow-hidden">
           <svg className="w-full h-full text-white" viewBox="0 0 600 200" fill="currentColor">
             <path d="M400 120h20v80h-20zM430 100h25v100h-25zM465 80h30v120h-30zM505 60h25v140h-25zM540 90h20v110h-20z" opacity="0.6"/>
@@ -1090,7 +1088,7 @@ export default function Home() {
               {testimonialsData.map((item) => (
                 <div 
                   key={item.id}
-                  className="min-w-[300px] sm:min-w-[340px] max-w-[360px] bg-white border border-[#e8dfd5] rounded-[24px] p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between snap-start shrink-0 relative group hover:border-[#c2a482] transition duration-300"
+                  className="min-w-[300px] sm:min-w-[340px] max-w-[360px] bg-white border border-[#e8dfd5] rounded-[24px] p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)] flex flex-col justify-between snap-start shrink-0 relative group hover:border-black transition duration-300"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -1132,10 +1130,10 @@ export default function Home() {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
-                    <a href="#read-more" className="text-[13px] font-medium text-neutral-900 underline hover:text-[#c2a482] transition">
+                    <a href="#read-more" className="text-[13px] font-medium text-neutral-900 underline hover:text-black transition">
                       Read more
                     </a>
-                    <span className="text-[#c2a482] font-serif text-2xl leading-none">&ldquo;&rdquo;</span>
+                    <span className="text-black font-serif text-2xl leading-none">&ldquo;&rdquo;</span>
                   </div>
                 </div>
               ))}
@@ -1166,17 +1164,20 @@ export default function Home() {
       </section>
 
       {/* ================= SECTION 15: FOOTER ================= */}
-      <footer className="w-full bg-[#4a423a] text-white pt-16 pb-8 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
+      <footer className="w-full bg-neutral-900 text-white pt-16 pb-8 px-4 sm:px-6 lg:px-12 relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           
           {/* Column 1: Brand & Socials */}
           <div className="flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-1.5 mb-6">
-                <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-                <span className="text-2xl font-bold tracking-wider text-white">vgt</span>
+              <div className="mb-6">
+                <Image 
+                  src="/2-removebg-preview.png" 
+                  alt="VGT Logo" 
+                  width={180}
+                  height={60}
+                  className="w-40 h-auto"
+                />
               </div>
 
               <p className="text-[12px] font-semibold tracking-wider text-neutral-300 uppercase mb-3">
@@ -1184,19 +1185,19 @@ export default function Home() {
               </p>
               
               <div className="flex items-center gap-2 mb-8">
-                <a href="#" className="w-9 h-9 bg-white text-[#4a423a] rounded-[6px] flex items-center justify-center hover:bg-[#c2a482] hover:text-white transition shadow">
+                <a href="#" className="w-9 h-9 bg-white text-black rounded-[6px] flex items-center justify-center hover:bg-black hover:text-white transition shadow">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-white text-[#4a423a] rounded-[6px] flex items-center justify-center hover:bg-[#c2a482] hover:text-white transition shadow">
+                <a href="#" className="w-9 h-9 bg-white text-black rounded-[6px] flex items-center justify-center hover:bg-black hover:text-white transition shadow">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-white text-[#4a423a] rounded-[6px] flex items-center justify-center hover:bg-[#c2a482] hover:text-white transition shadow">
+                <a href="#" className="w-9 h-9 bg-white text-black rounded-[6px] flex items-center justify-center hover:bg-black hover:text-white transition shadow">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-white text-[#4a423a] rounded-[6px] flex items-center justify-center hover:bg-[#c2a482] hover:text-white transition shadow">
+                <a href="#" className="w-9 h-9 bg-white text-black rounded-[6px] flex items-center justify-center hover:bg-black hover:text-white transition shadow">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-white text-[#4a423a] rounded-[6px] flex items-center justify-center hover:bg-[#c2a482] hover:text-white transition shadow">
+                <a href="#" className="w-9 h-9 bg-white text-black rounded-[6px] flex items-center justify-center hover:bg-black hover:text-white transition shadow">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
                 </a>
               </div>
@@ -1217,31 +1218,31 @@ export default function Home() {
             <ul className="flex flex-col gap-3.5 text-[13.5px] text-neutral-300">
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Jumeirah Village Circle</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Jumeirah Village Circle</span>
                   <span className="text-neutral-400 font-medium">56</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Dubai Hills Estate</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Dubai Hills Estate</span>
                   <span className="text-neutral-400 font-medium">50</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Business Bay</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Business Bay</span>
                   <span className="text-neutral-400 font-medium">48</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Dubai Creek Harbour</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Dubai Creek Harbour</span>
                   <span className="text-neutral-400 font-medium">46</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Town Square</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Town Square</span>
                   <span className="text-neutral-400 font-medium">43</span>
                 </a>
               </li>
@@ -1256,31 +1257,31 @@ export default function Home() {
             <ul className="flex flex-col gap-3.5 text-[13.5px] text-neutral-300">
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Emaar Properties</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Emaar Properties</span>
                   <span className="text-neutral-400 font-medium">258</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Damac Properties</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Damac Properties</span>
                   <span className="text-neutral-400 font-medium">102</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Sobha Realty</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Sobha Realty</span>
                   <span className="text-neutral-400 font-medium">64</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Aldar</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Aldar</span>
                   <span className="text-neutral-400 font-medium">48</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white flex items-center justify-between group">
-                  <span className="flex items-center gap-2"><span className="text-xs text-[#c2a482]">&#9658;</span> Nshama</span>
+                  <span className="flex items-center gap-2"><span className="text-xs text-black">&#9658;</span> Nshama</span>
                   <span className="text-neutral-400 font-medium">42</span>
                 </a>
               </li>
@@ -1294,23 +1295,23 @@ export default function Home() {
             </h3>
             <ul className="flex flex-col gap-3.5 text-[13px] text-neutral-300">
               <li className="flex items-start gap-2">
-                <span className="text-xs text-[#c2a482] mt-1">&#9658;</span>
+                <span className="text-xs text-black mt-1">&#9658;</span>
                 <span><strong>Headquarters:</strong> 2401 Exchange Tower - Business Bay - Dubai - United Arab Emirates</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-xs text-[#c2a482] mt-1">&#9658;</span>
+                <span className="text-xs text-black mt-1">&#9658;</span>
                 <span><strong>Town Square Branch:</strong> 2401 Exchange Tower - Business Bay - Dubai - United Arab Emirates</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-xs text-[#c2a482]">&#9658;</span>
+                <span className="text-xs text-black">&#9658;</span>
                 <span><strong>Toll Free:</strong> 800 37373</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-xs text-[#c2a482]">&#9658;</span>
+                <span className="text-xs text-black">&#9658;</span>
                 <span><strong>Hotline :</strong> +971 54 583 4608</span>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-xs text-[#c2a482]">&#9658;</span>
+                <span className="text-xs text-black">&#9658;</span>
                 <span><strong>Mail :</strong> info@vgtproperties.com</span>
               </li>
             </ul>
