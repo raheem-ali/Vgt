@@ -273,7 +273,7 @@ export default function Home() {
         <header className="relative z-30 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pt-5 flex items-center justify-between text-white">
           <div className="flex items-center gap-2 sm:gap-3">
             <Image 
-              src="/4-removebg-preview.png" 
+              src="/2-removebg-preview.png" 
               alt="VGT Logo" 
               width={200}
               height={70}
@@ -693,10 +693,12 @@ export default function Home() {
           
           <div className="text-center max-w-2xl mx-auto mb-12">
             <div className="flex justify-center mb-3">
-              <img 
-                src="https://drehomes.com/images/home-partner/DRE-X-BLACK-GOLD-cc.png" 
-                alt="VGT Xclusive Logo" 
-                className="h-10 sm:h-12 w-auto object-contain"
+              <Image 
+                src="/4-removebg-preview.png" 
+                alt="VGT Logo" 
+                width={200}
+                height={60}
+                className="w-48 h-auto"
               />
             </div>
             <p className="text-[11.5px] sm:text-[12.5px] tracking-[0.2em] uppercase text-neutral-500 font-medium mb-2">
