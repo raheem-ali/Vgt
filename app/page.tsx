@@ -178,7 +178,7 @@ const testimonialsData: Testimonial[] = [
     timeAgo: '1 month ago',
     avatarBg: 'bg-purple-600',
     avatarText: 'M',
-    review: 'Beyhan Turkmenoglu from Dre Homes is a highly competent real estate associate. He provides detailed information...'
+    review: 'Beyhan Turkmenoglu from VGT Homes is a highly competent real estate associate. He provides detailed information...'
   },
   {
     id: '2',
@@ -194,7 +194,7 @@ const testimonialsData: Testimonial[] = [
     timeAgo: '1 month ago',
     avatarBg: 'bg-neutral-300',
     avatarImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
-    review: 'I had an excellent experience buying my first home through DRE Homes, and I can\'t thank Faffie enough for all her suppor...'
+    review: 'I had an excellent experience buying my first home through https://vgt-lime.vercel.app/ Homes, and I can\'t thank Faffie enough for all her suppor...'
   }
 ];
 
@@ -280,7 +280,7 @@ export default function Home() {
               <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white fill-current" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
               </svg>
-              <span className="text-lg sm:text-xl font-bold tracking-wider text-white">dre</span>
+              <span className="text-lg sm:text-xl font-bold tracking-wider text-white">VGT</span>
             </div>
           </div>
 
@@ -342,7 +342,7 @@ export default function Home() {
           <div className="bg-white text-neutral-900 rounded-[20px] p-4 sm:p-5 shadow-[0_15px_40px_rgba(0,0,0,0.3)] flex flex-col lg:flex-row items-center justify-between gap-4 border border-white/40">
             <div className="w-full lg:w-[28%] flex flex-col justify-center py-1">
               <h1 className="text-[20px] sm:text-[22px] font-bold tracking-tight text-neutral-900 leading-snug">
-                Find Your DReAM Property
+                Find Your VGT Property
               </h1>
               <p className="text-[12px] sm:text-[12.55px] text-neutral-500 font-normal tracking-wide mt-0.5">
                 Search the best properties across the prime location
@@ -663,7 +663,7 @@ export default function Home() {
           
           <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center z-10">
             <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-normal text-[#4a4a4a] tracking-tight leading-[1.2]">
-              Unlock Your Golden Visa With DRE
+              Unlock Your Golden Visa With VGT
             </h2>
             <p className="text-[12px] sm:text-[13px] text-[#6b6b6b] font-normal mt-3 leading-relaxed max-w-[460px]">
               Invest in Dubai real estate and unlock exclusive Golden Visa benefits for a secure future, premium lifestyle, and long-term UAE residency.
@@ -681,7 +681,7 @@ export default function Home() {
           <div className="w-full lg:w-1/2 h-full flex items-center justify-end relative z-20 py-6 lg:py-0 pr-0 lg:pr-12">
             <img 
               src="https://drehomes.com/images/bg/Golden-Visa-14.png" 
-              alt="Unlock Your Golden Visa With DRE" 
+              alt="Unlock Your Golden Visa With VGT" 
               className="w-full max-w-[620px] h-auto object-contain transform lg:translate-x-2 drop-shadow-xl"
             />
           </div>
@@ -689,7 +689,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SECTION 7: DRE EXCLUSIVE SALES PARTNERS ================= */}
+      {/* ================= SECTION 7: VGT EXCLUSIVE SALES PARTNERS ================= */}
       <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12 border-t border-neutral-100">
         <div className="max-w-[1400px] mx-auto">
           
@@ -697,7 +697,7 @@ export default function Home() {
             <div className="flex justify-center mb-3">
               <img 
                 src="https://drehomes.com/images/home-partner/DRE-X-BLACK-GOLD-cc.png" 
-                alt="Drex Xclusive Logo" 
+                alt="VGT Xclusive Logo" 
                 className="h-10 sm:h-12 w-auto object-contain"
               />
             </div>
@@ -705,7 +705,7 @@ export default function Home() {
               STRONG PARTNERSHIPS. ICONIC DEVELOPMENTS.
             </p>
             <h2 className="text-[26px] sm:text-[32px] font-bold text-neutral-900 tracking-tight">
-              DRE Exclusive Sales Partners
+              VGT Exclusive Sales Partners
             </h2>
           </div>
 
@@ -757,7 +757,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SECTION 8: ABOUT DRE ================= */}
+      {/* ================= SECTION 8: ABOUT VGT ================= */}
       <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12 overflow-hidden">
         <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           
@@ -765,7 +765,7 @@ export default function Home() {
             <div className="relative rounded-[20px] overflow-hidden shadow-xl aspect-[16/10] bg-neutral-900 group">
               <img 
                 src="https://drehomes.com/admin_nsrdwsc/assets/media/project/home-card-img/home_card_1788501283_6052.jpg" 
-                alt="About DRE Office Interior" 
+                alt="About VGT Office Interior" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -781,7 +781,7 @@ export default function Home() {
 
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
             <span className="text-[11px] sm:text-[12px] font-semibold tracking-widest text-[#6b6b6b] uppercase">
-              About DRE
+              About VGT
             </span>
             <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-normal text-[#4a4a4a] tracking-tight leading-[1.2] mt-1.5">
               Elevating Real Estate with Trust and Excellence.
@@ -881,19 +881,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SECTION 10: MEET THE VISION BEHIND DRE ================= */}
+      {/* ================= SECTION 10: MEET THE VISION BEHIND VGT ================= */}
       <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-12 overflow-hidden">
         <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
             <span className="text-[11px] sm:text-[12px] font-semibold tracking-widest text-[#6b6b6b] uppercase">
-              Meet the vision behind DRE
+              Meet the vision behind VGT
             </span>
             <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-normal text-[#4a4a4a] tracking-tight leading-[1.2] mt-1.5">
               Built on relationships, driven by results.
             </h2>
             <p className="text-[12px] sm:text-[13px] text-[#6b6b6b] font-normal mt-3 leading-relaxed max-w-[520px]">
-              Founded on trust and expertise, DRE&apos;s founders are committed to helping clients make confident real estate decisions through honest guidance and deep market knowledge.
+              Founded on trust and expertise, VGT's founders are committed to helping clients make confident real estate decisions through honest guidance and deep market knowledge.
             </p>
             <div className="mt-6">
               <a
@@ -909,7 +909,7 @@ export default function Home() {
             <div className="relative rounded-[20px] overflow-hidden shadow-xl aspect-[16/10] bg-neutral-900 group">
               <img 
                 src="https://drehomes.com/admin_nsrdwsc/assets/media/project/home-card-img/home_card_1788501283_6052.jpg" 
-                alt="Meet the vision behind DRE Founders" 
+                alt="Meet the vision behind VGT Founders" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
@@ -1010,7 +1010,7 @@ export default function Home() {
               Smart Property Care
             </h2>
             <p className="text-[13.5px] sm:text-[14.5px] text-[#e8e2dc] font-normal mt-2.5 leading-relaxed">
-              DRE handles everything from tenant management and maintenance to rent collection and reporting, ensuring your property stays profitable, protected, and stress-free.
+              VGT handles everything from tenant management and maintenance to rent collection and reporting, ensuring your property stays profitable, protected, and stress-free.
             </p>
           </div>
 
@@ -1176,7 +1176,7 @@ export default function Home() {
                 <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
-                <span className="text-2xl font-bold tracking-wider text-white">dre</span>
+                <span className="text-2xl font-bold tracking-wider text-white">vgt</span>
               </div>
 
               <p className="text-[12px] font-semibold tracking-wider text-neutral-300 uppercase mb-3">
@@ -1295,11 +1295,11 @@ export default function Home() {
             <ul className="flex flex-col gap-3.5 text-[13px] text-neutral-300">
               <li className="flex items-start gap-2">
                 <span className="text-xs text-[#c2a482] mt-1">&#9658;</span>
-                <span><strong>Headquarters:</strong> Park Heights Square 2 | Offices 401-402-405-406 | Dubai Hills Estate | Dubai | UAE</span>
+                <span><strong>Headquarters:</strong> 2401 Exchange Tower - Business Bay - Dubai - United Arab Emirates</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-xs text-[#c2a482] mt-1">&#9658;</span>
-                <span><strong>Town Square Branch:</strong> Street Shop 2 | Community Center | Town Square Nshama Al Qudra | Dubai | UAE</span>
+                <span><strong>Town Square Branch:</strong> 2401 Exchange Tower - Business Bay - Dubai - United Arab Emirates</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-xs text-[#c2a482]">&#9658;</span>
@@ -1307,11 +1307,11 @@ export default function Home() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-xs text-[#c2a482]">&#9658;</span>
-                <span><strong>Hotline :</strong> +971 52 754 3243</span>
+                <span><strong>Hotline :</strong> +971 54 583 4608</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-xs text-[#c2a482]">&#9658;</span>
-                <span><strong>Mail :</strong> sales@drehomes.com</span>
+                <span><strong>Mail :</strong> info@vgtproperties.com</span>
               </li>
             </ul>
           </div>
@@ -1321,12 +1321,12 @@ export default function Home() {
         {/* Bottom Disclaimer & Links */}
         <div className="max-w-[1400px] mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-4 text-[12px] text-neutral-300">
           <p className="max-w-3xl leading-relaxed">
-            DRE Homes Real Estate Broker is a company registered in Dubai, United Arab Emirates (License No. 599208). We are regulated by the Real Estate Regulatory Agency under office number 652.
+            VGT Real Estate Broker is a company registered in Dubai, United Arab Emirates (License No. 599208). We are regulated by the Real Estate Regulatory Agency under office number 652.
           </p>
           <div className="flex items-center gap-4 shrink-0">
             <Link href="#" className="hover:text-white underline">Privacy Policy</Link>
             <span>|</span>
-            <Link href="" className="hover:text-white underline">T&amp;C</Link>
+            <Link href="#" className="hover:text-white underline">T&amp;C</Link>
           </div>
         </div>
       </footer>
